@@ -1,0 +1,11 @@
+ p{
+            color: blue;
+            background-color: yellowgreen;
+            text-align: center;
+        }
+        h1{
+            color: green;
+            background-color: lightcoral;
+            text-decoration: underline;
+            text-align: center;
+        }

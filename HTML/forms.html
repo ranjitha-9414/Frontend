@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+</head>
+<body>
+    <h2>Captcha Form</h2>
+    <!-- if need entire form in centre: <center><form> </form></center>-->
+    <form>
+
+        <fieldset>
+            <legend>Personal Information</legend><br>
+             <!--fieldset element is used to group related elements in a form -->
+             <!--legend element is used to provide a caption for the fieldset -->
+        <label for="captcha">Enter Captcha</label>
+        <!--label element is used to provide a label for the input field -->
+        <!--for attribute is used to associate the label with the input field -->
+        <input type="text" id="captcha" placeholder="Enter Captcha" name="captcha"><br>
+        <br>
+        <!--placeholder attribute is used to provide a hint to the user about what to enter -->
+        <!--input element is used to create an input field -->
+        <!--type attribute is used to specify the type of input field (text, password, email, etc.) -->
+        <br>
+        <label for="un">User name:</label>
+        <input type="text" id="un"  placeholder="Enter name" name="username" title="Your name"><br>
+        <br>
+        <!--name attribute is used to specify the name of the input field, which is used to identify the field when the form is submitted -->
+        <!--title attribute is used to provide additional information about the input field, which is displayed as a tooltip when the user hovers over the field -->
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter emailid" name="email"><br>
+        <br>
+        <label for="pwd">Password:<span style="color: red;">*</span></label>
+        <input type="password" id="pwd" placeholder="Enter password" name="password" required><br>
+        <br>
+        <!--required attribute is used to specify that the input field must be filled out before submitting the form -->
+        <label for="ph">Phone Number:</label>
+        <input type="tel" id="ph" placeholder="Enter phno" name="phone"><br>
+        <br>
+        <label for="age">Age:</label>
+        <input type="number" min="1" max="150" id="age" placeholder="Enter age" name="Age"><br>
+        <br>
+        <label for="dob">Date of birth:</label>
+        <input type="date" id="dob" name="dob" ><br>
+        <br>
+        <label for="date_time">Date of birth with time</label>
+        <input type="datetime-local" id="date_time" name="date_time"><br>
+        <br>
+        <label for="time">Time of birth:</label>
+        <input type="time" id="time" name="time"><br>
+        <br>
+        </fieldset>
+
+
+
+        <fieldset>
+            <legend>General Information</legend>
+            <br>
+        <label for="url">Profile URL:</label>
+        <input type="url" id="url" placeholder="Enter profile URL" name="profile_url"><br>
+        <br>
+        <label for="color">Choose your favorite color:</label>
+        <input type="color" id="color" name="color"><br>
+        <br>
+        <label for="file">Upload your pan card:</label>
+        <input type="file" id="file" name="pan_card" accept=".pdf, .jpeg, .png, .jpg"><br>    
+        <br>
+        <!-- accept attribute is used to specify the types of files that the input field should accept -->
+        <label for="hidden">Hidden Field:</label>
+        <input type="hidden" name="hidden_field" value="hidden_value">
+        <!--hidden input field is used to store data that is not visible to the user but can be submitted with the form -->
+        <br>
+        <label for="month">Month:</label>
+        <input type="month" id="month" name="month"><br>
+        <br>
+        <label for="search">Search:</label>
+        <input type="search" id="search" name="search" placeholder="enter what to search"><br>
+        <br>
+        <!--search input field is used to create a search box that allows users to enter search queries -->
+        <label for="week">Week:</label>
+        <input type="week" id="week" name="week"><br>
+        <br>
+        
+        <label >Gender:</label>
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+        <br><br>
+        <label for="range">Rate out of 10:</label>
+        <input type="range" id="range" name="rating" min="3" max="10" value="0"><br>
+        <br>
+        <!--range input field is used to create a slider that allows users to select a value from a specified range. such as volume, brightness ,filter-->
+        <!--value attribute specifies the initial value of the slider -->
+        <label for="checkbox">I agree to the terms and conditions:</label>
+        <input type="checkbox" id="checkbox" name="terms"><br>
+        <br>
+        <label><input type="checkbox" name="option1" value="cash">Cash</label>
+        <label><input type="checkbox" name="option2" value="rpay">RazorPay</label>
+        <label><input type="checkbox" name="option3" value="upi">UPI</label><br>
+        <br>
+        <!--checkbox input field is used to create a checkbox that allows users to select one or more options from a list -->
+        
+
+        <!-- This is for single selection -->
+        <label for="technology">Choose your favorite technology:</label>
+        <select id="technology" name="technology">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+        </select><br>
+        <br>
+     <!--select element is used to create a drop-down list that allows users to select one option from a list -->
+        
+        <!-- This is for multiple selection -->
+        <label for="technologies">Choose your favorite technologies:</label>
+        <select id="technologies" name="technologies" multiple>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+        </select><br>
+        <br>
+        <!-- This is for multiple selection -->
+
+        </fieldset>
+
+
+        <br>
+
+
+        <!--textarea-->
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here...">
+        </textarea><br>
+        <br>
+        <!--textarea input field is used to create a multi-line text input field -->
+
+        <label for="image" >click images to submit:</label>
+        <input type="image" src="/HTML/media/OIP.jpg" alt="Submit" width="100" height="50"><br>
+        <!--image input field is used to create a submit button that uses an image instead of text -->  
+        <br>
+        
+        <input type="submit">&nbsp; &nbsp; &nbsp;
+         <!--submit button is used to submit the form -->
+         <!--&nbsp; is used to add a non-breaking space between the buttons -->
+        <input type="reset" value="cancel">
+        <!--reset button is used to reset the form to its default values -->
+        <br>
+        <button type="button">help center</button><br>
+         <!--button element is used to create a clickable button -->
+         <!--type attribute is used to specify the type of button (button, submit, reset) -->
+         <!--by default, the type of button is "submit" if not specified -->
+         <!--in this case, we have specified the type as "button" to prevent it from submitting the form -->
+        <button type="button" disabled>disabled button</button>
+            <!--disabled attribute is used to disable the button, making it unclickable and grayed out -->
+    </form>
+</body>
+</html>

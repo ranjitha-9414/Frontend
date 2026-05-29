@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe Tag </title>
+</head>
+<body>
+    <h1>My Webpage</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eligendi sed amet placeat repellendus voluptas molestiae enim nemo nostrum. Deserunt, assumenda. Facilis nobis ullam rerum enim velit ducimus error aut!</p>
+    <!--<iframe> element is used to embed another HTML page within the current page for the purpose of displaying content from another source such as advertisements -->
+    <iframe src="https://www.kodnest.com" width="50%" height="500px" title="Kodnest Website"></iframe><hr>
+     <!--src attribute specifies the URL of the page to embed-->
+     <!--width and height attributes specify the size of the iframe-->
+     <!--title attribute provides a title for the iframe for accessibility purposes-->
+     <iframe src="https://www.flipkart.com" width="50%"height="500px" title="Flipkart" scrolling="yes"></iframe><hr>
+     <hr>
+     <!--scrolling attribute specifies whether to display scrollbars in the iframe (yes, no, auto)-->
+    <iframe src="https://www.kodnest.com" width="50%"height="500px" title="Kodnest" scrolling="no"></iframe><hr>
+    <!--scrolling attribute specifies whether to display scrollbars in the iframe (yes, no, auto)-->
+     <iframe src="https://www.instamart.com" width="50%"height="500px" title="BigBasket" scrolling="auto"></iframe><hr>
+     <!--scrolling attribute specifies whether to display scrollbars in the iframe (yes, no, auto)-->
+    <iframe src="https://www.savana.com" width="50%"height="500px" title="Kodnest" scrolling="no" frameborder="0"></iframe><hr>
+    <!--frameborder attribute specifies whether to display a border around the iframe (0 or 1)-->
+     <iframe src="https://www.makemytrip.com" name="makemytrip" width="50%"height="500px" title="Kodnest" scrolling="no" frameborder="1"></iframe><hr>
+     <!--frameborder attribute specifies whether to display a border around the iframe (0 or 1)-->
+     <!--name attribute specifies A targetable name for the embedded browsing context. This can be used in the target attribute of the <a>, <form>, or <base> elements; the formtarget attribute of the <input> or <button> elements; or the windowName parameter in the window.open() method.-->
+    <iframe srcdoc='<h1>MultiMedia Tags</h1> <a href="media.html"> Media</a>' width="50%" height="500px" title="My website" scrolling="yes"></iframe><hr>
+    <!--srcdoc attribute specifies the HTML content to display in the iframe inside this element we <a> tag to link to the media page -->
+    <iframe srcdoc='<h1>MultiMedia Tags</h1> <a href=""> Media</a>' width="50%" height="500px" title="My website" scrolling="yes"></iframe><hr>
+        <!-- if we didn't give link to href attribute it embeds the current page -->
+    
+    
+    <iframe srcdoc='<h1>My own Website</h1> <a href="https://www.flipkart.com" target="frame2"> click here to visit Flipkart</a>' name="frame1" 50%" height="500px" title="My website" scrolling="yes"></iframe><hr>
+
+    <iframe src="" name="frame2" width="50%" height="500px" title="Filpkart website" scrolling="yes"></iframe><hr>
+    <!--In the above code, we have two iframes. The first iframe has a link that targets the second iframe using the name attribute. When the user clicks on the link in the first iframe, it will load the Flipkart website in the second iframe.-->
+</body>
+</html>

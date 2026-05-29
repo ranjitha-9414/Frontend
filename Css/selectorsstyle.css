@@ -1,0 +1,235 @@
+/* Universal selector(*) : For all elements */
+* {
+    font-style: italic;
+    color: darkgreen;
+}
+
+/* Type/Tag selector : For all <p>/ Specific  elements */
+p {
+    text-shadow: 0cm 0.1cm 0.2cm gray;
+}
+
+h3 {
+    text-align: center;
+}
+
+/* ID selector (#) : For the element with a specific ID 
+                        It should have a unique ID within the document */
+#para {
+    text-align: center;
+}
+
+/* Class selector (.) : For all elements with the specific class name -reusable
+     it can have multiple classes with the same name */
+    
+.redpara {
+    color: red;
+}
+
+.line {
+    text-decoration: underline;
+}
+
+/* Grouping selector : To apply the same styles to multiple selectors
+you can do with the help of symbol (,): h1,p,h2 */
+
+h1,h3 {
+    background-color: rgb(217, 10, 120);
+}
+
+/* Attribute selector [] : To select elements based on the presence or value of an attribute */
+
+p[id="para"] {
+    text-decoration: line-through;
+}
+
+/* Descendant selector : To select elements that are descendants of a specified element */
+/* It is represented by a space between two selectors */
+
+body h3 {
+    background-color: aqua;
+}
+
+/* child selector (>) : */
+
+body > h1 {
+    color: maroon;
+}
+
+/* Adjacent sibling selector (+) : To select an element that is immediately preceded by a specified element */
+/* It is represented by the symbol (+) between two selectors */
+
+h3 + p {
+    font-weight: bold;
+}
+
+/* General sibling selector (~) : To select all elements that are siblings of a specified element */
+/*` It is represented by the symbol (~) between two selectors */
+
+h3 ~ p {
+    text-decoration: underline;
+}
+
+
+/* Pseudo-class selector : To select elements based on their state or position in the document */
+/* It is represented by a colon (:) followed by the pseudo-class name */
+
+/* :hover : To select an element when the user hovers over it with the mouse */
+
+.button {
+    background-color: lightblue;
+    border: none;
+    padding: 10px 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: blue;
+    color: white;
+}
+
+/* :focus : To select an element when it has focus (e.g., when a user clicks on an input field) */
+input:focus {
+    border: 2px solid blue;
+    background-color: rgb(217, 217, 35);
+    outline: none;
+}
+
+/* :nth-child(n) : To select elements based on their position among siblings */
+/* It takes a number (n) as an argument, which can be a specific number,
+a keyword (e.g., odd, even), or a formula (e.g., 2n+1) */
+
+.container div:nth-child(2) {
+    color: rgb(233, 43, 144);
+    font-weight: bold;
+}
+
+/* :first-child : To select the first child element of a parent */
+p:first-child {
+    color: rgb(214, 101, 44);
+}
+
+/* :last-child : To select the last child element of a parent */
+p:last-child {
+    color: rgb(128, 0, 68);
+    font-weight: bold;
+}
+
+/* :visited : To select links that have been visited by the user */
+a:visited {
+    color: purple;
+}
+
+/* :active : To select links that are currently being activated (e.g., when a user clicks on a link) */
+a:active {
+    color: red;
+}
+
+/* :only-child : To select an element that is the only child of its parent */
+/* It is represented by the pseudo-class :only-child */
+/* It selects an element that is the only child of its parent, meaning it has no siblings */
+/*for example, if you have a <p> element that is the only child of a <div>, you can use the selector .container p:only-child to apply styles to that <p> element */
+/* if there are multiple <p> elements inside the <div>, the :only-child selector will not apply to any of them, because none of them is the only child of the parent <div> */
+/* This selector is useful for targeting specific elements that are unique within their parent container, allowing you to apply styles only to those elements without affecting others that may be siblings */
+/* it is important to note that the :only-child selector only applies to elements that are the only child of their parent, and it will not apply to elements that have siblings, even if those siblings are of a different type. For example, if you have a <div> that contains a <p> and an <h3>, the :only-child selector will not apply to either of those elements, because they both have siblings within the same parent container. */
+
+.container {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+}
+
+.container p:only-child {
+    color: darkblue;
+    font-weight: bold;
+}
+
+/* :not(selector) : To select elements that do not match a specified selector */
+/* It is represented by the pseudo-class :not() followed by a selector inside the parentheses */
+/* It selects elements that do not match the specified selector, allowing you to apply styles to all elements except those that match the selector inside the :not() function */
+
+h1:not(.line) {
+    color: rgb(140, 199, 30);
+}
+/*This selector will apply the specified styles to all <h1> elements that do not have the class "line". In this case, it will change the color of those <h1> elements to rgb(140, 199, 30), while any <h1> elements with the class "line" will not be affected by this selector. The :not() pseudo-class is useful for targeting elements that do not meet certain criteria, allowing you to apply styles to a broader range of elements while excluding specific ones based on their attributes, classes, or other selectors. */
+
+/* :checked : To select checkboxes or radio buttons that are checked */
+
+label {
+    font-size: 18px;
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label {
+    background-color: rgb(8, 169, 238);
+}
+/* This selector will apply the specified styles to the <label> element that immediately follows an <input> element of type "checkbox" that is currently checked. When a user checks the checkbox, the adjacent <label> will change its background color to rgb(8, 169, 238), providing a visual indication that the checkbox is selected. The :checked pseudo-class is commonly
+    used to style form elements based on their state, allowing you to create interactive and visually appealing user interfaces. */
+
+/* :enabled and :disabled : To select form elements that are enabled or disabled */ 
+
+input:enabled {
+    background-color: rgb(223, 223, 161);
+}
+
+input:disabled {
+    background-color: rgb(217, 217, 35);
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* pseudo-element selector :: To style specific parts of an element */
+/* It is represented by a double colon (::) followed by the pseudo-element name */
+
+/* ::before : To insert content before an element */
+/* It allows you to insert content before the actual content of an element, and you can style that inserted content using CSS properties */
+
+h3::before {
+    content: "Chapter: ";
+    font-weight: bold;
+    color: red;
+}
+
+/* ::after : To insert content after an element */
+p::after {
+    content: " - End of paragraph";
+    font-weight: bold;
+    color: red;
+}
+
+/* ::first-line : To style the first line of a block-level element */
+p::first-line {
+    font-weight: bold;
+    background-color: lightpink;
+}
+
+/* ::first-letter : To style the first letter of a block-level element */
+p::first-letter {
+    font-size: 24px;
+    font-weight: bold;
+    color: darkmagenta;
+}
+
+/* ::placeholder : To style the placeholder text of an input field */
+input::placeholder {
+    color: gray;
+    font-style: italic;
+    background-color: rgb(220, 149, 187);
+}
+
+/* ::selection : To style the portion of an element that is selected by the user */
+::selection {
+    background-color: yellow;
+    color: black;
+}
+
+/* ::marker : To style the marker box of list items */
+li::marker {
+    color: rgb(242, 11, 204);
+    font-size: 20px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <h2>User Forms</h2>
+    <hr>
+    <br><br>
+    <form>
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="username" pattern="^[A-Za-z]{2,10}$" title="Enter only Alphabet">
+        <br><br>
+
+        <!--Capital Letters VIRAT-->
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="username" pattern="^[A-Z]{2,10}$" title="Enter only Alphabet">
+        <br><br>
+
+        <!-- Title Case  Virat-->
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="username" pattern="^[A-Z][a-z]{1,50}$" title="Enter only Alphabet">
+        <br><br>
+
+        <!-- FirstName and LastName Virat Kholi-->
+         <label for="name">Username:</label>
+        <input type="text" id="name" name="name" pattern="^[A-Z][a-z]{1,50} [A-Z][a-z]{1,50}$" title="Enter FirstName and LastName ">
+        <br><br>
+
+        <!--Full Name Ranjitha C-->
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" pattern="^[A-Z][a-z]{1,50} [A-Z]{1,50}$" title="Enter FirstName and LastName ">
+        <br><br>
+
+        <!-- Roopashree KN Nayak-->
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" pattern="^[A-Z][a-z]{1,50} [A-Z]{1,50} [A-Z][a-z]{1,50}$" title="Enter FirstName and LastName ">
+        <br><br>
+
+        <!--Phone Number Validation -->
+
+        <!-- 10 digit phone number -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phno" pattern="^[0-9]{10}$" title="Enter 10 digit phone number">
+        <br><br>
+
+        <!--990-166-7891 ^\d{3}-[0-9]{3}-\d{4}$-->
+        <label for="phno">Phone Number:</label>
+        <input type="tel" id="phno" name="phno" pattern="^\d{3}-\d{3}-\d{4}$" title="Enter phone number in the format XXX-XXX-XXXX">
+        <br><br>
+
+        <!--only indian phone number [6,7,8,9]-->
+        <label for="indianphone">Indian Phone Number:</label>
+        <input type="tel" id="indianphone" name="indianphone" pattern="^[6-9]{1}[0-9]{9}$" title="Enter only Indian phone number (10 digits starting with 6, 7, 8, or 9)">
+        <br><br>
+
+        <!--Phone number with country code +91 990-166-7891-->
+        <label for="countryphone">Phone Number:</label>
+        <input type="tel" id="countryphone" name="countryphone" pattern="^\+91 [6-9]{1} \d{2}-\d{3}-\d{4}$" title="Enter phone number in the format +91-XXX-XXX-XXXX">
+        <br><br>
+
+        <!-- Indian Phone Number with Country Code  -->
+        <label for="indiancountryphone">Indian Phone Number:</label>
+        <input type="tel" id="indiancountryphone" name="indiancountryphone" pattern="^\+91 [6-9]{1}[0-9]{9}$" title="Enter only Indian phone number with country code (10 digits starting with 6, 7, 8, or 9)">
+        <br><br>
+
+        <!-- Password Validation -->
+
+        <!-- Basic Password Validation - Password with at least 8 characters, including uppercase, lowercase, number, and special character -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" pattern="^.{8,}$" title="Enter a strong password with at least 8 characters, including uppercase, lowercase, number, and special character">
+        <br><br>
+
+        <!--Pattern without lookahead-->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" pattern="^[A-Za-z\d@$!%*?&]{8,}$" title="Enter a strong password with at least 8 characters, including uppercase, lowercase, number, and special character">
+        <br><br>
+
+        <!--Pattern with lookahead-->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" pattern="^(?=.*[a-z])(?=>*[A-Z)[A-za-z\d].{8,}$" title="Enter a strong password with at least 8 characters, including uppercase, lowercase, number, and special character">
+        <br><br>
+
+        <!--Strong password validation :Pattern with lookahead and special character-->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#&^*!$])[a-zA-Z\d!@#$^&*].{12,60}$" title="Enter a strong password with at least 8 characters, including uppercase, lowercase, number, and special character">
+        <br><br>
+
+         <!--Custom password validation-->       
+        <label for="custompassword">Custom Password:</label>
+        <input type="password" id="custompassword" name="custompassword" pattern="^(?=(.*[A-Z]){2,})(?=(.*\d){2,})(?=.*[a-z])(?=.*[!@#$^&*])[a-zA-Z\d!@#$^&*].{10,}$" title="Enter a strong password with at least 8 characters, including uppercase, lowercase, number, and special character">
+        <br><br>
+
+        <!--Email Validation example: john.doe@example.com -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9\._%+\-]+@[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,}$" title="Enter a valid email address">
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+       
+    </form>
+</body>
+</html>

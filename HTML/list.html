@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Tags</title>
+</head>
+<body>
+    <!--List Tags-->
+    <h2>Ordered List</h2>
+    <!-- ordered list is used to create a list with numbered items -->
+    <ol>
+        <li>veg Palav</li>
+        <li>Puri</li>
+        <li>Dosa</li><!--<li> Tag is used for list items -->
+    </ol>
+
+    <ol type="A"><!--type attribute is used to specify the type of list (A, a, I, i)-->
+        <li>Virat Kohli</li>
+        <li>Rohit Sharma</li>
+        <li>MS Dhoni</li>
+    </ol>
+    <ol type="i">
+        <li>India</li>
+        <li>Australia</li>
+        <li>England</li>
+    </ol>
+    <ol type="1" start="98"><!--start attribute is used to specify the starting number of the list-->
+        <li>Virat Kohli</li>
+        <li>Rohit Sharma</li>
+        <li>MS Dhoni</li>
+    </ol>
+    <ol type="A" start="X">
+        <li>Book</li>
+        <li>Pen</li>
+        <li>Notebook</li>
+    </ol>
+    <!-- Here output doesn't change bcz start attribute supports only numeric values -->
+    <ol type="A" start="24">
+        <li>Book</li>
+        <li>Pen</li>
+        <li>Notebook</li>
+    </ol>
+    <hr>
+    <h2>Unordered List</h2>
+    <!-- unordered list is used to create a list with bullet points -->
+    <ul>
+        <li>Chapathi</li><!--<ul> Tag is used for unordered list -->
+        <li>Rice</li>
+        <li>Curd</li>
+    </ul>
+
+    <ul type="square"><!--type attribute is used to specify the type of list (circle, square, disc)-->
+        <li>India</li>
+        <li>Australia</li>
+        <li>England</li>
+    </ul>
+    <ul type="circle">  
+        <li>India</li>
+        <li>Australia</li>
+        <li>England</li>    
+    </ul>
+    <ul type="disc">    
+        <li>India</li>
+        <li>Australia</li>
+        <li>England</li>
+    </ul>
+    <hr>
+    <h2>Description/Definition List</h2>
+    <!-- description list is used to create a list of terms and their descriptions -->
+    <dl>
+        <dt>HTML</dt><!--<dl>/definition term(dt) Tag is used for description list -->
+        <dd>Hyper Text Markup Language</dd><!--<dt>/ definition term(dd) Tag is used for terms and <dd> Tag is used for descriptions -->
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+        <dt>JS</dt>
+        <dd>JavaScript</dd>
+    </dl>
+    <hr>
+    <h2>Nested List</h2>
+    <!-- nested list is used to create a list within a list --> 
+     <ul>
+        <li><h2>Healthy Items</h2></li>
+        <ol>
+            <li>Fruits</li>
+            <dl>
+                <dt>Apple</dt>
+                <dd>Red in color and sweet in taste</dd>
+                <dt>Banana</dt>
+                <dd>Yellow in color and sweet in taste</dd>
+                <dd>rich in potassium</dd>
+                <dt>Mango</dt>
+                <dd>Orange in color and sweet in taste</dd>
+            </dl>
+            <li>Vegetables</li>
+            <dl>    
+                <dt>Carrot</dt>
+                <dd>Orange in color and sweet in taste</dd>
+                <dt>Spinach</dt>
+                <dd>Green in color and bitter in taste</dd>
+                <dt>Broccoli</dt>
+                <dd>Green in color and bitter in taste</dd>
+            </dl>
+        </ol>
+     </ul>
+</body>
+</html>

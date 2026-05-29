@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box sizing</title>
+    <style>
+        *{
+            margin:0px;
+        }
+         
+        h1{
+            text-shadow: 5px 5px 2px lightcoral;
+        }
+        .nb {
+            width:150px;/*190px*/
+            height:150px;/*190px*/
+            background-color:palegreen;
+            padding:20px;
+            border: 5px solid orange;
+            margin: 10px;
+        }
+        .cb {
+            width:150px;/*bcz of padding the content box will be 150px and the total width will be 190px and the total height will be 190px*/
+            height:150px;/*bcz of padding the content box will be 150px and the total width will be 190px and the total height will be 190px*/
+            background-color:palegreen;
+            box-sizing:content-box;
+            padding:20px;
+            border: 5px solid orange;
+            
+        }
+        .bb {
+            width:150px;
+            height:150px;
+            background-color:palegreen;
+           box-sizing:border-box;/*the width and the height of the border box remains same bcz of box-sizing:border-box; the padding and the border will be included in the total width and height of the element.*/
+            padding:20px;
+            border: 5px solid orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Box Sizing</h1>
+    <br>
+    <br>
+    <div class="nb">Normal Box</div>
+    <div class="cb">Content Box</div>
+    <div class="bb">Border Box</div>
+</body>
+</html>

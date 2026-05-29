@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        *{
+            
+            margin:0px;
+        }
+        div{
+            width:100px;
+            height:100px;
+            background-color:aqua;
+            padding:20px;
+            /*shorthand property for border is border:width style color;*/
+            border:5px solid red;
+            /* 1 value: margin:20px;top bottom left right*/
+            /* 2 values: margin:20px 40px; 20px top and bottom 40px left and right*/
+            /* 3 values: margin:20px 40px 60px; 20px top 40px left and right 60px bottom */
+            /* 4 values: margin:20px 40px 60px 80px; 20px top 40px right 60px bottom 80px left (clockwise)*/
+            /*padding and border also have the same properties as margin with 1 value,2 values,3 values and 4 values*/
+            margin:20px 40px 60px 80px;
+            outline: 10px dashed green; /*outline is a line drawn outside the border edge of an element. It does not take up space and can be non-rectangular.*/
+            box-shadow: 50px 20px 10px pink;
+            /*50px is the horizontal offset, 20px is the vertical offset , 10px is the blur radius and pink is the color of the shadow. The blur radius and spread radius are optional and can be added after the color.*/
+        }
+
+        .box{
+            width:300px;
+            height:300px;
+            background-color:yellow;
+            margin-top: 20px;
+            padding-top: 20px;
+            border: 1px solid black;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            margin-left: 200px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+   <div>
+    Box Model
+   </div>
+   <div class="box">
+    margin left,margin right,margin top,margin bottom are the properties of margin
+    padding left,padding right,padding top,padding bottom are the properties of padding
+    border left,border right,border top,border bottom are the properties of border
+    </div>
+</body>
+</html>
