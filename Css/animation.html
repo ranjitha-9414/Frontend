@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        body {
+            background-color: red;
+            animation-name: colorchange;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+       /* @keyframes colorchange {/* for animate two colors 
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: white;
+            }
+        }*/
+        @keyframes colorchange {
+            20% {background-color: red;}
+            40% {background-color: blue;}
+            60% {background-color: green;}
+            80% {background-color: yellow;}
+            100% {background-color: white;}
+        }
+      /*  @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+       h1 {
+            animation-name: fadeIn;
+            animation-duration: 5s;
+        } */
+         @keyframes fadeOut {
+            0% {opacity:1;}
+            100% {opacity: 0;}
+         }
+
+         h1 {
+            animation-name: fadeOut;
+            animation-duration: 5s;
+            animation-iteration-count: 2;
+            animation-timing-function: linear;
+         }
+         @keyframes slideIn {
+            0% {transform: translateX(-100%);}/*not visible when 0%*/
+            100% {transform: translateX(0);}/*vsible*/
+         }
+         p{
+            animation-name: slideIn;
+            animation-duration: 5s;
+         }
+         
+    </style>
+</head>
+<body>
+    <h1>CSS Animations</h1>
+    <p>CSS animations allow you to create dynamic and engaging web content by animating HTML elements. 
+        You can define keyframes to specify the styles at different points in the animation, and then apply the animation to an element using the animation property.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum numquam id nobis nam! Sed fugit iusto accusantium amet debitis assumenda aliquam neque veniam? Omnis consequuntur earum iure quis dicta fugit?        
+    </p>
+</body>
+</html>

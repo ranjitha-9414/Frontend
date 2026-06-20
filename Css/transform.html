@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        div {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+            border: 3px solid black;
+            text-align: center;
+           /* transform:translate(550px,0);/*move from left to right*/
+            /*transform:translate(-100px,0);/*move from right to left*/
+           /*transform:translate(0,50px);/*move from top to bottom*/
+          /* transform:translate(0,-50px);/*move from bottom to top*/
+          transform: translate(150px,150px);
+          top:150px;
+          left:200px;
+          
+
+        }
+        div:hover {
+         /* transform: translate(50%,50%);
+            transform: scale(2);/*scale up the element to 2 times of its original size*/
+          /* transform: rotate(45deg);/*rotate the element by 45 degrees*/
+      /*  transform: rotate(-45deg);/*rotate the element by -45 degrees*/
+        /*transform: rotate(45deg) scale(1.5);/*rotate the element by 45 degrees and scale it up to 1.5 times of its original size*/
+     /* transform: translate(50px,50px) rotate(45deg) scale(1.5);/*move the element 50px to the right and 50px down, rotate it by 45 degrees and scale it up to 1.5 times of its original size*/
+/* transform: skew(10deg);/*skew the element by 10 degrees along the x-axis*/
+     /*transform: skew(0,20deg);/*skew the element by 20 degrees along the y-axis*/
+    /*  transform: skew(10deg,20deg);/*skew the element by 10 degrees along the x-axis and 20 degrees along the y-axis*/
+      /*transform-origin: top left;/*set the origin of the transformation to the top left corner of the element*/
+      transform-origin:bottom left;
+        transform: rotate(45deg) scale(1.5);/*rotate the element by 45 degrees and scale it up to 1.5 times of its original size*/
+        }
+    </style>
+</head>
+<body>
+    <div>Hello</div>
+</body>
+</html>

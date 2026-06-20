@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Position properties</title>
+    <style>
+        div#static {
+           width:300px;
+           height: 200px;
+           border: 2px solid black;
+           background-color: lightblue;
+           left: 50px;/* does not affect the position of the element because by default it is static */
+           top: 50px; /* does not affect the position of the element because by default it is static */
+        }
+        div#relative {
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            background-color: lightcoral;
+            position: relative;
+            left:300px; /* moves the element 100px to the right from its normal position */
+            
+        }
+        div#parent {
+            width: 500px;
+            height: 400px;
+            border: 2px solid black;
+            background-color: lightgreen;
+            position: relative;
+            
+        }
+        div#child {
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            background-color: rgb(215, 215, 92);
+            position: absolute;
+            left:50px;
+            top: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="static">
+        <h1>Static Position</h1>
+        <p>This is static position. It is default position of all elements. It is not affected by top, bottom, left and right properties.</p>
+    </div>
+    <div id="relative">
+        <h1>Relative Position</h1>
+        <p>This is relative position. It is affected by top, bottom, left and right properties. It is positioned relative to its normal position.</p>
+    </div>
+    <div id="parent">
+        
+    
+        <div id="child">
+            <h1>Absolute Position</h1>
+            <p>This is absolute position. It is affected by top, bottom, left and right properties. It is positioned relative to the nearest positioned ancestor (not static). If there is no positioned ancestor, it uses the document body, and moves along with page scrolling.</p>  
+        </div>
+    </div>
+</body>
+</html>
