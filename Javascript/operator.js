@@ -121,3 +121,12 @@ document.writeln("str2 instanceof Object: " + (str2 instanceof Object) + "<br>")
 let num2 = 42;
 document.writeln("num2 instanceof Number: " + (num2 instanceof Number) + "<br>");
 document.writeln("num2 instanceof Object: " + (num2 instanceof Object) + "<br>");
+
+//Tricky questions
+
+console.log("5" -2);
+console.log(0 == false);//
+console.log(0 === false);//
+console.log(null == undefined);
+console.log(true + true);//op: 2
+console.log(true + false);//op: 1
