@@ -37,3 +37,4 @@ function add(...numbers) {
 console.log(add(10));
 console.log(add(10,20));
 console.log(add(10,20,50));
+
