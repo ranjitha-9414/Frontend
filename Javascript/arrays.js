@@ -108,3 +108,31 @@ console.log(arr2.join("-")); // Output: "Hello-World-from-JavaScript"
 
 let val =[1,2,3,4,5];
 console.log(val.join(" - ")); // Output: "1 - 2 - 3 - 4 - 5"
+
+let words = ["JavaScript", "is", "fun", 7.90];
+console.log(words.join(" ")); // Output: "JavaScript is fun 7.9"
+
+
+//reduce() method is used to reduce the array to a single value by applying a function to each element of the array
+//syntax: array.reduce(callback(accumulator, currentValue, currentIndex, array), initialValue)
+
+let value = [1,2,3,4,5];
+let sum = value.reduce((acc,num)=> acc+num,0);
+console.log(`The sum of the array is: ${sum}`); // Output: 15
+
+//concat() method is used to merge two or more arrays
+let fruits1 = ["Apple", "Banana"];
+let numbers1 = [1,2,3];
+let mergedArray = fruits1.concat(numbers1);
+console.log(mergedArray); // Output: ["Apple", "Banana", 1, 2, 3]
+
+let fruits2 = ["Mango", "Orange"];
+let allFruits = fruits1.concat(fruits2);
+console.log(allFruits); // Output: ["Apple", "Banana", "Mango", "Orange"]
+
+//Array destructuring is a feature in JavaScript that allows you to unpack values from arrays or properties from objects into distinct variables. It provides a concise way to extract data from arrays and objects.
+ let fru = ["apple", "mango","cherry"];
+ let[first, second] = fru;
+ console.log(first);
+ console.log(second);
+ popup.js
