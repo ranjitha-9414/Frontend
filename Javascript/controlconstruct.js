@@ -93,10 +93,10 @@ switch(month) {
     case 2 : console.log("Winter"); break;
     case 3:
     case 4:
-    case 5:
-    case 6 : console.log("Summer"); break;
+    case 5:  console.log("Summer"); break;
+    case 6:
     case 7:
-    case 8: console.log("Moonson"); break;
+    case 8: console.log("Rainy"); break;
     case 9:
     case 10:
     case 11 : console.log("Spring"); break;
@@ -104,7 +104,7 @@ switch(month) {
 }
 
 for(let i = 1; i<=10; i++) {
-    console.log(i);
+    console.log(i); //process.stdout.write(i + " "); to print in the same line
 }
 
 let i = 1;
@@ -119,8 +119,18 @@ do {
 } while(pin != 1234);
 console.log("Access Granted");
 
-let num1 = [1,2,3,4,5];
-num1.forEach(num => console.log(num * num));
+
+do {
+    pin = parseInt(prompt("Enter your Pin: "));
+    if(pin === 1234) {
+        console.log("Access Granted");
+        break;
+    } else {
+        console.log("Access Denied");
+    }
+} while(true);
+
+
 
 for(let i = 1; i<=10; i++) {
     if(i === 3)
@@ -138,4 +148,16 @@ for(let i = 1; i<=10; i++) {
         console.log(i);
 }
 
+let fruits = ["mango", "Banana","cherry"];
+for(let fru of fruits) {
+    console.log(fru);
+}
+
+let student = {name: "John", age: 20, grade: "A"};
+for(let key in student) {
+    console.log(`${key} : ${student[key]}`);
+}
+
+let num1 = [1,2,3,4,5];
+num1.forEach(num => console.log(num * num));
 
