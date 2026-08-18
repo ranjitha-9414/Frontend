@@ -54,3 +54,4 @@ class child extends Parent {
         console.log("Marry at 32");
     }
 }
+
