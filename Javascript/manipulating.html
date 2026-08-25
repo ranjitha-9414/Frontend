@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating Attribute</title>
+</head>
+<body>
+    <a href="https://app.kodnest.com/" target="_blank">Go to kodnest</a>  <br><br>
+    <button onclick="setButton()">SetAttribute</button>
+    <button onclick="getButton()">GetAttribute</button>
+    <button onclick="removeButton()">Remove </button>
+    <script>
+       let anchor= document.querySelector("a");
+       function setButton() {
+        anchor.setAttribute('href',"https://www.instagram.com");
+        anchor.innerText="Click to Visit Instagram";
+       }
+
+       function getButton() {
+        console.log(anchor.getAttribute('href'));
+        alert(anchor.getAttribute('href'));
+        // document.writeln(link);
+       }
+       function removeButton() {
+        anchor.removeAttribute("href");
+       }
+       
+
+       console.log()
+    </script>  
+</body>
+</html>

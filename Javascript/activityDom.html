@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM activity</title>
+    <style>
+        div {
+            height : 100px;
+            width : 300px;
+            background-color: blue;
+            border: 2px solid aqua;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 >DOM Manipulation</h1>
+    <button onclick="addBox()">Add Box</button>
+    <button onclick="removeBox()">Remove Box</button>
+    <script>
+        function addBox() {
+           let b= document.querySelector("body");
+             let blueDiv = document.createElement("div");
+             b.appendChild(blueDiv);
+        }
+
+        function removeBox() {
+           //  b = document.querySelector("body");
+           let remove = document.querySelector("div");
+           b.removeChild(remove);
+        }
+        
+    </script>
+</body>
+</html>
