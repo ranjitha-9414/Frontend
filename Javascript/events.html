@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JavaScript</title>
+    <style>
+      body {
+         height : 300vh;
+      }
+        #myDiv {
+            height: 150px;
+            width: 150px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mouse Events</h1>
+    <br>
+    <div id="myDiv"></div>
+    <!-- Keyboard Events-->
+     <br>
+     <br>
+     <input type="text">
+     <br>
+     <br>
+     <form>
+      <label>Enter your Name: </label>
+      <input type="text" id = "name"><br><br>
+      <button type="submit">Submit</button>
+     </form>
+    <script>
+
+      //Window Events
+
+      //DOMContentLoaded
+      document.addEventListener('DOMContentLoaded', () => {
+         console.log("Document Fully loaded");
+        
+      });
+
+      window.addEventListener('DOMContentLoaded', () => {
+         alert("Content loaded Successfully.");
+      })
+
+      //resize
+      window.addEventListener('resize', () => {
+         alert("The document is resized");
+        
+      });
+
+      //scroll
+
+      window.addEventListener('scroll', (event) => {
+         console.log("window Scrolled", window.scrollX, window.scrollY)
+         console.log("The mouse is scrolling");
+         alert("you are scrolling");
+      });
+
+
+       //Form Events
+      let f = document.querySelector('form');
+      f.addEventListener("submit", (e) => {
+         e.preventDefault();
+         alert("Form is Submitted Successfully.");
+      });
+      //focus
+      document.querySelector('input').addEventListener("focus", () => {
+         document.querySelector('input').style.backgroundColor ="green";
+         console.log("Input field is focused");
+      });
+
+      //blur
+      document.getElementById("name").addEventListener("blur", () => {
+         document.getElementById("name").style.color = "red";
+         console.log("The input field is blured");
+      });
+
+      document.querySelector('input').addEventListener("blur", () => {
+         document.querySelector('input').style.backgroundColor ="red";
+         console.log("Input field is blured");
+      });
+
+      //change
+      document.querySelector('#name').addEventListener("change", (event) => {
+         console.log(`Input changed to: ${event.target.value}`);
+      });
+
+      //input
+      document.querySelector('#name').addEventListener("input", (event) => {
+         console.log(` The Input is: ${event.target.value}`);
+      });
+
+         //mouse Events
+
+         let div = document.getElementById("myDiv");
+         div.addEventListener("click", () => {
+            div.style.backgroundColor = "red";
+         });
+
+         div.addEventListener("dblclick", () => {
+            div.style.backgroundColor = "yellow";
+            div.innerText= "User Double clicked"
+         });
+
+         div.addEventListener("mouseover", () => {
+            div.style.backgroundColor = "blue";
+         });
+         div.addEventListener("mouseout", () => {
+            div.style.backgroundColor = "aqua";
+         });
+
+         //Fetch the value of x and y axis
+         //so we use eventObject(parameters)name e
+         div.addEventListener("mousemove", (e) => {
+            div.innerText = `X value is ${e.offsetX} and Y value ${e.offsetY}`;
+            //alert("Do not move outside the box");
+         });
+
+         //keyboard Events
+
+         let i = document.querySelector('input');
+         i.addEventListener("keydown", (event) => {
+            console.log("The key is pressed is" , event.key);
+         });
+
+         i.addEventListener("keyup", (event) => {
+            console.log("Key released is", event.key);
+         });
+
+         i.addEventListener("keypress", (event) => {
+            const pattern = /^[a-zA-Z]$/;
+            if(!pattern.test(event.key)) {
+               event.preventDefault();
+            }
+         });
+
+        
+
+    </script>
+</body>
+</html>
