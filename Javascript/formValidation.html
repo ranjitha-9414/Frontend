@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation in JavaScrit</title>
+
+</head>
+<body>
+    <form>
+    <label>Enter Your Name: </label>
+    <input type="text" id="username">
+    <br><br>
+    <label>Enter your Email: </label>
+    <input type="email" id="email" name="email" required>
+    <br><br>
+    <label>Enter your Password: </label>
+    <input type="password" id="password" name="password">
+    <br><br><br>
+    <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const f = document.querySelector('form');
+
+        //username validation
+        const username = document.getElementById('username');
+
+        username.addEventListener('keypress', (event) => {
+            const pattern = /^[a-zA-Z]$/;
+            if(!pattern.test(event.key)) {
+               event.preventDefault();
+            }
+        });
+
+        f.addEventListener('submit',(event) => {
+            event.preventDefault();
+        let un = username.value.trim();
+        let regexun = /^[a-zA-Z]+$/;
+        console.log(un);
+        console.log(regexun.test(un));
+        if(username.value.trim() === "") {
+            alert("Warning: UserName can not be Empty");
+        } else if (un.length < 2) {
+            alert("Warning: Username should be more than 2 characters.")
+        } else if (un.length > 15) {
+            alert("Warning: Username should be less than 15 characters.")
+        } else if (!regexun.test(un)) {
+            alert("Only Letters are allowed!!");
+
+        } else {
+            alert("valid Name");
+        }
+    });
+    
+    //Email Validation
+
+    
+
+    f.addEventListener('submit', () => {
+        const email = document.getElementById('email').value.trim();
+        let regexem = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if(!regexem.test(email)) {
+            alert("please Enter a valid email address.");
+        } else {
+            alert("valid Email");
+        }
+    });
+
+    //password Validation
+    
+
+     f.addEventListener('submit', () => {
+        const password = document.getElementById('password').value.trim();
+        const regexpa = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+        if(!regexpa.test(password)) {
+            alert("please Enter a valid password.");
+        } else {
+            alert("valid password");
+        }
+     });
+    </script>
+</body>
+</html>
